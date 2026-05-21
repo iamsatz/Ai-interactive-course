@@ -10,7 +10,7 @@ const children = [
 export function SubagentDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="300" height="150" viewBox="0 0 300 150" fill="none">
         {/* Parent */}
         <rect x="10" y="55" width="90" height="40" rx="8"
@@ -40,6 +40,5 @@ export function SubagentDiagram() {
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.9 }}>parallel execution</motion.text>
       </svg>
-    </div>
   )
 }

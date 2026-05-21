@@ -5,7 +5,7 @@ export function HallucinationDiagram() {
   const { inView } = useConceptContext()
 
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="380" height="130" viewBox="0 0 380 130" fill="none">
         {/* Prompt */}
         <motion.g initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.4 }}>
@@ -70,6 +70,5 @@ export function HallucinationDiagram() {
           </text>
         </motion.g>
       </svg>
-    </div>
   )
 }

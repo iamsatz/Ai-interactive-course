@@ -11,7 +11,7 @@ const tools = [
 export function ToolDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="320" height="150" viewBox="0 0 320 150" fill="none">
         <rect x="100" y="55" width="80" height="40" rx="8"
           fill="var(--bg-card)" stroke="var(--border)" strokeWidth="1.5" />
@@ -33,6 +33,5 @@ export function ToolDiagram() {
           </motion.g>
         ))}
       </svg>
-    </div>
   )
 }

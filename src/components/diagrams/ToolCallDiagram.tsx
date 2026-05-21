@@ -4,7 +4,7 @@ import { useConceptContext } from '@/context/ConceptContext'
 export function ToolCallDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="380" height="100" viewBox="0 0 380 100" fill="none">
         {['Think', 'Decide', 'Call tool', 'Get result'].map((step, i) => {
           const x = 20 + i * 90
@@ -34,6 +34,5 @@ export function ToolCallDiagram() {
           You see a permission prompt at "Call tool"
         </motion.text>
       </svg>
-    </div>
   )
 }

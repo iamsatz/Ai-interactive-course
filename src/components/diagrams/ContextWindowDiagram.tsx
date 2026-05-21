@@ -14,7 +14,7 @@ export function ContextWindowDiagram() {
   ]
 
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="380" height="180" viewBox="0 0 380 180" fill="none">
         {/* Container */}
         <rect x="20" y="10" width="240" height="160" rx="10"
@@ -77,6 +77,5 @@ export function ContextWindowDiagram() {
           </text>
         </motion.g>
       </svg>
-    </div>
   )
 }

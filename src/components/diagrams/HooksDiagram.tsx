@@ -10,7 +10,7 @@ const hooks = [
 export function HooksDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="340" height="130" viewBox="0 0 340 130" fill="none">
         {hooks.map((h, i) => (
           <motion.g key={i}
@@ -45,6 +45,5 @@ export function HooksDiagram() {
           </motion.g>
         ))}
       </svg>
-    </div>
   )
 }

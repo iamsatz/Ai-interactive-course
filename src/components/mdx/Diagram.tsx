@@ -21,5 +21,9 @@ export function Diagram({ id }: DiagramProps) {
     )
   }
 
-  return <DiagramComponent />
+  return (
+    <div className="diagram-card">
+      <DiagramComponent />
+    </div>
+  )
 }

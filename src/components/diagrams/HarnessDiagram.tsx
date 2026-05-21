@@ -4,7 +4,7 @@ import { useConceptContext } from '@/context/ConceptContext'
 export function HarnessDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="320" height="150" viewBox="0 0 320 150" fill="none">
         {/* Outer harness */}
         <motion.rect x="20" y="15" width="280" height="120" rx="12"
@@ -49,6 +49,5 @@ export function HarnessDiagram() {
           </motion.text>
         ))}
       </svg>
-    </div>
   )
 }

@@ -22,7 +22,7 @@ export function EmbeddingDiagram() {
   const { inView } = useConceptContext()
 
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="400" height="150" viewBox="0 0 400 150" fill="none">
         {/* Axes */}
         <motion.line x1="30" y1="130" x2="390" y2="130"
@@ -75,6 +75,5 @@ export function EmbeddingDiagram() {
           </motion.g>
         ))}
       </svg>
-    </div>
   )
 }

@@ -11,7 +11,7 @@ const commits = [
 export function CommitDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="360" height="110" viewBox="0 0 360 110" fill="none">
         <motion.line x1="20" y1="55" x2="340" y2="55"
           stroke="var(--border)" strokeWidth="1.5"
@@ -43,6 +43,5 @@ export function CommitDiagram() {
           )
         })}
       </svg>
-    </div>
   )
 }

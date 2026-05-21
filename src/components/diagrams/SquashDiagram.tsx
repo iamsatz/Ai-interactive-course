@@ -6,7 +6,7 @@ export function SquashDiagram() {
   const many = [0, 1, 2, 3, 4, 5]
 
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="340" height="110" viewBox="0 0 340 110" fill="none">
         {/* Many commits on branch */}
         <text x="80" y="16" textAnchor="middle" fontSize="8.5"
@@ -47,6 +47,5 @@ export function SquashDiagram() {
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 1.3 }}>1 clean commit</motion.text>
       </svg>
-    </div>
   )
 }

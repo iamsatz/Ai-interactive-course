@@ -4,7 +4,7 @@ import { useConceptContext } from '@/context/ConceptContext'
 export function PRDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="340" height="120" viewBox="0 0 340 120" fill="none">
         {/* Feature branch */}
         <motion.rect x="10" y="20" width="100" height="30" rx="6"
@@ -59,6 +59,5 @@ export function PRDiagram() {
           transition={{ delay: 1.0 }}
         >Review diff before merge — even solo</motion.text>
       </svg>
-    </div>
   )
 }

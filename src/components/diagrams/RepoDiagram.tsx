@@ -6,7 +6,7 @@ const commits = ['init', 'add nav', 'fix bug', 'feature', 'polish', 'HEAD']
 export function RepoDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="360" height="100" viewBox="0 0 360 100" fill="none">
         {/* Timeline line */}
         <motion.line x1="30" y1="50" x2="340" y2="50"
@@ -35,6 +35,5 @@ export function RepoDiagram() {
           )
         })}
       </svg>
-    </div>
   )
 }

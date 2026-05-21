@@ -15,7 +15,7 @@ const lines = [
 export function SettingsDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="340" height="150" viewBox="0 0 340 150" fill="none">
         <rect x="20" y="10" width="200" height="130" rx="8"
           fill="var(--bg-card)" stroke="var(--border)" strokeWidth="1.5" />
@@ -56,6 +56,5 @@ export function SettingsDiagram() {
           </motion.g>
         ))}
       </svg>
-    </div>
   )
 }

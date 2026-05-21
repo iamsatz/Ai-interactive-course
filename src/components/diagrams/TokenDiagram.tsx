@@ -11,7 +11,7 @@ export function TokenDiagram() {
   const { inView } = useConceptContext()
 
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="380" height="120" viewBox="0 0 380 120" fill="none">
         {/* Original word */}
         <motion.text
@@ -71,6 +71,5 @@ export function TokenDiagram() {
           </text>
         </motion.g>
       </svg>
-    </div>
   )
 }

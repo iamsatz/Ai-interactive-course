@@ -6,7 +6,7 @@ const steps = ['Read CLAUDE.md', 'Check branch', 'Plan changes', 'Implement', 'R
 export function SkillDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="360" height="140" viewBox="0 0 360 140" fill="none">
         {/* Skill box */}
         <motion.rect x="10" y="50" width="90" height="40" rx="8"
@@ -50,6 +50,5 @@ export function SkillDiagram() {
           </motion.g>
         ))}
       </svg>
-    </div>
   )
 }

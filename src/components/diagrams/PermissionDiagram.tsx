@@ -4,7 +4,7 @@ import { useConceptContext } from '@/context/ConceptContext'
 export function PermissionDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="300" height="140" viewBox="0 0 300 140" fill="none">
         <motion.rect x="60" y="20" width="180" height="100" rx="10"
           fill="var(--bg-card)" stroke="var(--border)" strokeWidth="2"
@@ -48,6 +48,5 @@ export function PermissionDiagram() {
             fill="var(--ink-secondary)" fontFamily="var(--font-body)">Deny</text>
         </motion.g>
       </svg>
-    </div>
   )
 }

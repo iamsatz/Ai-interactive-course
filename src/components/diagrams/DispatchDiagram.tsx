@@ -4,7 +4,7 @@ import { useConceptContext } from '@/context/ConceptContext'
 export function DispatchDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="320" height="120" viewBox="0 0 320 120" fill="none">
         {/* Brief box */}
         <motion.rect x="10" y="35" width="90" height="50" rx="8"
@@ -57,6 +57,5 @@ export function DispatchDiagram() {
           fill="var(--ink-muted)" fontFamily="var(--font-body)">when you wake</text>
         <text x="266" y="79" textAnchor="middle" fontSize="12">🌅</text>
       </svg>
-    </div>
   )
 }

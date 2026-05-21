@@ -4,7 +4,7 @@ import { useConceptContext } from '@/context/ConceptContext'
 export function BranchDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="360" height="130" viewBox="0 0 360 130" fill="none">
         {/* Main branch */}
         <motion.line x1="20" y1="65" x2="340" y2="65"
@@ -52,6 +52,5 @@ export function BranchDiagram() {
           transition={{ delay: 1.1 }}
         >main stays clean — experiment on the copy</motion.text>
       </svg>
-    </div>
   )
 }

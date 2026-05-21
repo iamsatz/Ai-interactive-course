@@ -12,7 +12,7 @@ const lines = [
 export function DiffDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="360" height="120" viewBox="0 0 360 120" fill="none">
         <rect x="20" y="10" width="320" height="100" rx="8"
           fill="var(--bg-card)" stroke="var(--border)" strokeWidth="1.5" />
@@ -40,6 +40,5 @@ export function DiffDiagram() {
           )
         })}
       </svg>
-    </div>
   )
 }

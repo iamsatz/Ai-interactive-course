@@ -6,7 +6,7 @@ const commands = ['/start', '/figma-to-code', '/review', '/ship']
 export function SlashCommandDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="340" height="130" viewBox="0 0 340 130" fill="none">
         {/* Input bar */}
         <rect x="20" y="50" width="180" height="36" rx="8"
@@ -50,6 +50,5 @@ export function SlashCommandDiagram() {
         <text x="284" y="72" textAnchor="middle" fontSize="9"
           fill="var(--accent-claude)" fontFamily="var(--font-body)">Skill runs</text>
       </svg>
-    </div>
   )
 }

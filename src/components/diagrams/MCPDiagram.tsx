@@ -11,7 +11,7 @@ const apps = [
 export function MCPDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="340" height="160" viewBox="0 0 340 160" fill="none">
         {/* Claude box */}
         <rect x="10" y="60" width="80" height="40" rx="8"
@@ -59,6 +59,5 @@ export function MCPDiagram() {
           </motion.g>
         ))}
       </svg>
-    </div>
   )
 }

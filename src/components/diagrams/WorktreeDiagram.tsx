@@ -10,7 +10,7 @@ const trees = [
 export function WorktreeDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="340" height="130" viewBox="0 0 340 130" fill="none">
         {trees.map((t, i) => (
           <motion.g key={i}
@@ -40,6 +40,5 @@ export function WorktreeDiagram() {
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.8 }}>same repo — three live states</motion.text>
       </svg>
-    </div>
   )
 }

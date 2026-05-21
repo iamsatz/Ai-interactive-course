@@ -5,7 +5,7 @@ export function TemperatureDiagram() {
   const { inView } = useConceptContext()
 
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="400" height="140" viewBox="0 0 400 140" fill="none">
         {/* Slider track */}
         <rect x="40" y="55" width="240" height="6" rx="3"
@@ -76,6 +76,5 @@ export function TemperatureDiagram() {
             fill="var(--ink-secondary)" fontFamily="var(--font-body)">each run</text>
         </motion.g>
       </svg>
-    </div>
   )
 }

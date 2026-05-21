@@ -11,7 +11,7 @@ const nodes = [
 export function AgentLoopDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="320" height="160" viewBox="0 0 320 160" fill="none">
         {/* Circular path */}
         <motion.circle cx="160" cy="80" r="70" stroke="var(--border)"
@@ -50,6 +50,5 @@ export function AgentLoopDiagram() {
           </marker>
         </defs>
       </svg>
-    </div>
   )
 }

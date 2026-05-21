@@ -5,7 +5,7 @@ export function PromptDiagram() {
   const { inView } = useConceptContext()
 
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Input box */}
         <rect x="10" y="30" width="140" height="60" rx="8"
@@ -85,6 +85,5 @@ export function PromptDiagram() {
           Output
         </motion.text>
       </svg>
-    </div>
   )
 }

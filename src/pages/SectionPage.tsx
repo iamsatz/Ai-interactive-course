@@ -13,6 +13,7 @@ import { Diagram } from '@/components/mdx/Diagram'
 import { Analogy } from '@/components/mdx/Analogy'
 import { WhyItMatters } from '@/components/mdx/WhyItMatters'
 import { RelatedTerms } from '@/components/mdx/RelatedTerms'
+import { VideoLesson } from '@/components/mdx/VideoLesson'
 
 type MDXModule = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -36,6 +37,7 @@ const mdxComponents = {
   Analogy,
   WhyItMatters,
   RelatedTerms,
+  VideoLesson,
 }
 
 export function SectionPage() {

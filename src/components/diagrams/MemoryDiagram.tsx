@@ -12,7 +12,7 @@ const lines = [
 export function MemoryDiagram() {
   const { inView } = useConceptContext()
   return (
-    <div className="my-6 flex justify-center">
+    
       <svg width="340" height="140" viewBox="0 0 340 140" fill="none">
         {/* File card */}
         <rect x="50" y="10" width="140" height="110" rx="8"
@@ -57,6 +57,5 @@ export function MemoryDiagram() {
             fill="var(--accent-power)" fontFamily="var(--font-body)">context persists</text>
         </motion.g>
       </svg>
-    </div>
   )
 }

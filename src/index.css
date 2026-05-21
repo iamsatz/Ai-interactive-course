@@ -59,34 +59,24 @@ code {
 .prose-concept p:last-child { margin-bottom: 0; }
 .prose-concept strong { color: var(--ink-primary); font-weight: 600; }
 
-/* ── Diagrams ────────────────────────────────────────────────
-   Scale SVGs up so their labels are legible.
-   The viewBox keeps all positioning intact; we just render bigger.
+/* ── Diagram card shell ──────────────────────────────────────
+   Clean card wrapper applied in Diagram.tsx around every SVG.
+   The SVG scales proportionally via viewBox — no font-size override
+   needed; text carries its own size relative to the shape geometry.
    ──────────────────────────────────────────────────────────── */
-.prose-concept svg {
+.diagram-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 20px;
+  margin: 1.75rem 0;
+  overflow: visible;
+}
+
+.diagram-card svg {
   width: min(100%, 560px);
   height: auto;
   display: block;
   margin: 0 auto;
-}
-
-/* Bump all SVG text labels — overrides inline fontSize attributes */
-.prose-concept svg text {
-  font-size: 13px;
-  font-family: var(--font-body);
-}
-
-/* Keep mono labels in mono */
-.prose-concept svg text[font-family*="mono"],
-.prose-concept svg text[fontFamily*="mono"] {
-  font-family: var(--font-mono);
-  font-size: 12px;
-}
-
-/* Preserve large accent / display numbers */
-.prose-concept svg text[font-size="18"],
-.prose-concept svg text[font-size="22"],
-.prose-concept svg text[fontSize="18"],
-.prose-concept svg text[fontSize="22"] {
-  font-size: 22px;
+  overflow: visible;
 }
