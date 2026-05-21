@@ -3,7 +3,6 @@ import type { ReactNode } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { ConceptContext } from '@/context/ConceptContext'
 import { useProgress } from '@/hooks/useProgress'
-import { TaskList } from '@/components/mdx/TaskList'
 
 interface ConceptSectionProps {
   id: string
@@ -94,9 +93,6 @@ export function ConceptSection({ id, term, category, oneLiner, children }: Conce
 
           {/* MDX content */}
           <div className="prose-concept">{children}</div>
-
-          {/* Tasks — automatically rendered per concept (no MDX edits needed) */}
-          <TaskList />
         </div>
       </motion.section>
     </ConceptContext.Provider>

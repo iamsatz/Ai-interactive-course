@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { getSectionById, sections } from '@/data/sections'
 import { faqs } from '@/data/faqs'
 import { quizzes } from '@/data/quizzes'
-import { SectionNav } from '@/components/layout/SectionNav'
+import { SectionAside } from '@/components/layout/SectionAside'
 import { GuidedNext } from '@/components/layout/GuidedNext'
 import { FAQSection } from '@/components/mdx/FAQSection'
 import { Quiz } from '@/components/mdx/Quiz'
@@ -13,7 +13,6 @@ import { Diagram } from '@/components/mdx/Diagram'
 import { Analogy } from '@/components/mdx/Analogy'
 import { WhyItMatters } from '@/components/mdx/WhyItMatters'
 import { RelatedTerms } from '@/components/mdx/RelatedTerms'
-import { TaskList } from '@/components/mdx/TaskList'
 import { Confusions } from '@/components/section/Confusions'
 
 type MDXModule = {
@@ -38,7 +37,6 @@ const mdxComponents = {
   Analogy,
   WhyItMatters,
   RelatedTerms,
-  TaskList,
 }
 
 export function SectionPage() {
@@ -78,8 +76,8 @@ export function SectionPage() {
 
   return (
     <div className="flex gap-8 max-w-5xl mx-auto px-6 py-12">
-      {/* Sticky left nav */}
-      <SectionNav concepts={navLinks} accent={section.accent} />
+      {/* Sticky left aside — concept nav + tasks for active concept */}
+      <SectionAside concepts={navLinks} accent={section.accent} />
 
       {/* Main content */}
       <main className="flex-1 min-w-0">
@@ -112,9 +110,6 @@ export function SectionPage() {
           </p>
         </motion.div>
 
-        {/* Common confusions — shown BEFORE concepts to head off wrong mental models */}
-        <Confusions sectionId={sectionId ?? ''} accent={section.accent} />
-
         {/* Concepts — pass components directly, no MDXProvider needed */}
         <div className="space-y-0">
           {concepts.map(({ default: Content, frontmatter: fm }) => (
@@ -134,6 +129,9 @@ export function SectionPage() {
         {sectionFaqs.length > 0 && (
           <FAQSection faqs={sectionFaqs} accent={section.accent} />
         )}
+
+        {/* Common confusions — at the end, as a sanity-check before moving on */}
+        <Confusions sectionId={sectionId ?? ''} accent={section.accent} />
 
         {/* Next section */}
         {nextSection && <GuidedNext next={nextSection} />}
