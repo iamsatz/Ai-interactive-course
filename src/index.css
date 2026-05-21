@@ -73,7 +73,10 @@ code {
   overflow: visible;
 }
 
-.diagram-card svg {
+/* Only direct-child SVGs (old-style diagrams) get the auto-scale.
+   HTML-based diagrams may contain nested overlay SVGs that need to keep
+   their own 100% width / height: auto behaviour. */
+.diagram-card > svg {
   width: min(100%, 560px);
   height: auto;
   display: block;
