@@ -14,6 +14,7 @@ import { Analogy } from '@/components/mdx/Analogy'
 import { WhyItMatters } from '@/components/mdx/WhyItMatters'
 import { RelatedTerms } from '@/components/mdx/RelatedTerms'
 import { Confusions } from '@/components/section/Confusions'
+import { TasksSection } from '@/components/section/TasksSection'
 
 type MDXModule = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -120,18 +121,25 @@ export function SectionPage() {
         {/* Divider */}
         <div className="my-16" style={{ borderTop: '1px solid var(--border)' }} />
 
-        {/* Quiz */}
+        {/* Knowledge test (Quiz) */}
         {sectionQuiz.length > 0 && (
-          <Quiz questions={sectionQuiz} sectionAccent={section.accent} />
+          <div id="knowledge-test" className="scroll-mt-24">
+            <Quiz questions={sectionQuiz} sectionAccent={section.accent} />
+          </div>
         )}
+
+        {/* Common misconceptions */}
+        <Confusions sectionId={sectionId ?? ''} accent={section.accent} />
+
+        {/* Try this — hands-on tasks grouped by concept */}
+        <TasksSection concepts={navLinks} accent={section.accent} />
 
         {/* FAQs */}
         {sectionFaqs.length > 0 && (
-          <FAQSection faqs={sectionFaqs} accent={section.accent} />
+          <div id="faqs" className="scroll-mt-24">
+            <FAQSection faqs={sectionFaqs} accent={section.accent} />
+          </div>
         )}
-
-        {/* Common confusions — at the end, as a sanity-check before moving on */}
-        <Confusions sectionId={sectionId ?? ''} accent={section.accent} />
 
         {/* Next section */}
         {nextSection && <GuidedNext next={nextSection} />}

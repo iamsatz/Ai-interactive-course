@@ -15,11 +15,12 @@ export function Confusions({ sectionId, accent }: ConfusionsProps) {
 
   return (
     <motion.section
+      id="common-misconceptions"
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.5 }}
-      className="my-14"
+      className="my-14 scroll-mt-24"
     >
       {/* Heading */}
       <div className="mb-6">
@@ -27,7 +28,7 @@ export function Confusions({ sectionId, accent }: ConfusionsProps) {
           className="text-xs font-medium tracking-widest uppercase mb-3"
           style={{ color: accent, fontFamily: 'var(--font-body)' }}
         >
-          ⚠ Before you start
+          Reality check
         </p>
         <h2
           style={{
@@ -36,13 +37,13 @@ export function Confusions({ sectionId, accent }: ConfusionsProps) {
             lineHeight: 1.25,
           }}
         >
-          What people commonly get wrong
+          Common misconceptions
         </h2>
         <p
           className="mt-2 text-sm"
           style={{ color: 'var(--ink-secondary)', fontFamily: 'var(--font-body)' }}
         >
-          Read these first. The wrong mental model blocks learning more than any missing fact.
+          Skim these. Mark the ones you would have agreed with before reading the section — those are the mental models worth revisiting.
         </p>
       </div>
 

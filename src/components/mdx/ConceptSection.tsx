@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { ConceptContext } from '@/context/ConceptContext'
 import { useProgress } from '@/hooks/useProgress'
+import { tasks as allTasks } from '@/data/tasks'
 
 interface ConceptSectionProps {
   id: string
@@ -93,6 +94,21 @@ export function ConceptSection({ id, term, category, oneLiner, children }: Conce
 
           {/* MDX content */}
           <div className="prose-concept">{children}</div>
+
+          {/* Try-this jump link — only shown when the concept has tasks */}
+          {(allTasks[id] ?? []).length > 0 && (
+            <a
+              href={`#tasks-${id}`}
+              className="inline-flex items-center gap-1.5 mt-6 text-sm transition-colors hover:underline"
+              style={{
+                color: accent,
+                textDecoration: 'none',
+                fontFamily: 'var(--font-body)',
+              }}
+            >
+              Try this for {term} <span aria-hidden>↓</span>
+            </a>
+          )}
         </div>
       </motion.section>
     </ConceptContext.Provider>
