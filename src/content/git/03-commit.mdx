@@ -1,0 +1,34 @@
+---
+id: "commit"
+term: "Commit"
+category: "git"
+order: 3
+oneLiner: "A saved, named snapshot. Your project's save game."
+analogy: "Saving a named version in Figma: \"Homepage — pre-nav refactor.\" Commit early, commit often."
+whyItMatters: "The more commits, the finer your undo history. AI-assisted sessions should commit at every milestone."
+related: ["branch", "diff", "repo"]
+---
+
+<ConceptSection id="commit" term="Commit" category="git" oneLiner="A saved, named snapshot. Your project's save game.">
+
+A **commit** is a permanent, named snapshot of your project at a specific point in time. Unlike a regular file save, a commit goes into the repo's permanent history. You can return to it any time with `git checkout`.
+
+Every commit has a message that describes what changed. Good messages are brief and specific: *"Add mobile nav breakpoints"* rather than *"stuff"*.
+
+<Diagram />
+
+For AI-assisted work, commit aggressively:
+- After initial project setup
+- After each discrete feature or component
+- Before asking Claude to do anything risky
+- After you review and approve a set of changes
+
+Think of commits as your undo checkpoints. The more granular they are, the more precisely you can recover from a bad session.
+
+<Analogy>Saving a named version in Figma: "Homepage — pre-nav refactor." Commit early, commit often. Each commit is a bookmark in your project's history you can return to.</Analogy>
+
+<WhyItMatters accent="var(--accent-git)">The more commits, the finer your undo history. AI-assisted sessions should commit at every meaningful milestone. If Claude introduces a regression three steps later, you can revert to the last clean commit and try again.</WhyItMatters>
+
+<RelatedTerms ids={["branch", "diff", "repo"]} />
+
+</ConceptSection>

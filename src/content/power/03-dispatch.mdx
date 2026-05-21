@@ -1,0 +1,30 @@
+---
+id: "dispatch"
+term: "Dispatch / Cowork"
+category: "power"
+order: 3
+oneLiner: "Long-running async agents. Claude that works while you sleep."
+analogy: "Leaving your junior a detailed brief before going to bed. It's done when you wake up."
+whyItMatters: "Useful for tasks that take hours — code audits, large refactors, research passes."
+related: ["subagent", "hooks"]
+---
+
+<ConceptSection id="dispatch" term="Dispatch / Cowork" category="power" oneLiner="Long-running async agents. Claude that works while you sleep.">
+
+**Dispatch** (sometimes called Cowork) is the mode where you hand Claude a long, complex task and let it run autonomously for an extended period — minutes to hours — without interactive supervision.
+
+You provide a detailed brief: the goal, constraints, what "done" looks like, what to avoid. Claude works through it in the background, using the agent loop to iterate. You come back to results.
+
+<Diagram />
+
+The key difference from a regular session: in a regular session, Claude waits for you after each step. In Dispatch, it keeps going. You review the output at the end, not at every step.
+
+Good Dispatch tasks: codebase audits, migrating a design system, writing documentation, refactoring a large module, research synthesis. Bad Dispatch tasks: anything where early decisions need human input to stay on track.
+
+<Analogy>Leaving your junior a detailed brief before going to bed. It's done when you wake up — but only if the brief was clear enough to cover every decision they'd otherwise have to ask you about.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Useful for tasks that take hours. Instead of a 3-hour interactive session where you review every step, you write a thorough brief once and get a complete result. Time-multiplies your output.</WhyItMatters>
+
+<RelatedTerms ids={["subagent", "hooks"]} />
+
+</ConceptSection>

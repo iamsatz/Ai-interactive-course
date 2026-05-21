@@ -1,0 +1,33 @@
+---
+id: "diff"
+term: "Diff"
+category: "git"
+order: 4
+oneLiner: "The red/green view of exactly what changed."
+analogy: "Track Changes in a Google Doc — but for code. Claude shows the diff before applying anything."
+whyItMatters: "Always read the diff before accepting. This is your review step. Do not skip it."
+related: ["commit", "pr"]
+---
+
+<ConceptSection id="diff" term="Diff" category="git" oneLiner="The red/green view of exactly what changed.">
+
+A **diff** shows the precise difference between two versions of a file. Red lines were removed. Green lines were added. Lines with neither colour are context — unchanged surrounding lines included so you understand where the change lives.
+
+Claude Code shows you a diff before applying most changes. This is intentional. The diff is your review gate — the moment to check that what the model is proposing matches what you actually wanted.
+
+<Diagram />
+
+Reading diffs gets faster with practice. Focus on:
+- The **scope** — how many files changed?
+- The **nature** — is it adding logic, restructuring, or deleting something?
+- **Unexpected lines** — anything that wasn't what you asked for
+
+If the diff looks right, approve it. If anything is unexpected, reject it and clarify your prompt.
+
+<Analogy>Track Changes in a Google Doc — but for code. A transparent record of exactly what changed between two states. Claude shows the diff before applying anything. This is your one review step before changes land.</Analogy>
+
+<WhyItMatters accent="var(--accent-git)">Always read the diff before accepting. This is your review step. Do not skip it. Every time you approve a diff without reading it, you are giving up oversight of your codebase. This is especially true for AI-generated changes.</WhyItMatters>
+
+<RelatedTerms ids={["commit", "pr"]} />
+
+</ConceptSection>

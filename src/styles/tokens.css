@@ -1,0 +1,28 @@
+:root {
+  /* Background */
+  --bg-base: #F5F2EE;
+  --bg-card: #FFFFFF;
+  --ink-primary: #1A1A18;
+  --ink-secondary: #5C5A56;
+  --ink-muted: #9E9B96;
+  --border: #E2DED8;
+
+  /* Category accents */
+  --accent-llm:       #D4622A; /* terracotta */
+  --accent-agent:     #2A6D8F; /* slate blue */
+  --accent-claude:    #4A7C59; /* forest green */
+  --accent-git:       #7C4A8F; /* violet */
+  --accent-power:     #8F6F2A; /* amber */
+  --accent-resources: #2A4A8F; /* navy */
+
+  /* Typography scale */
+  --text-display: clamp(2rem, 5vw, 3.5rem);
+  --text-heading: clamp(1.5rem, 3vw, 2rem);
+  --text-term:    clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-body:    1rem;
+  --text-small:   0.875rem;
+
+  /* Spacing */
+  --section-gap: 6rem;
+  --card-gap:    1.5rem;
+}

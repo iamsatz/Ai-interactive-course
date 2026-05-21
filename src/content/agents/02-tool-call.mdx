@@ -1,0 +1,28 @@
+---
+id: "tool-call"
+term: "Tool Call"
+category: "agent"
+order: 2
+oneLiner: "The model deciding to use a tool. The moment of action."
+analogy: "The model picks up the phone and dials. You'll see this in Claude Code as a permission prompt."
+whyItMatters: "Recognising tool calls helps you understand when the model is thinking versus doing."
+related: ["tool", "agent-loop", "permission"]
+---
+
+<ConceptSection id="tool-call" term="Tool Call" category="agent" oneLiner="The model deciding to use a tool. The moment of action.">
+
+When the model decides that executing a tool is the right next step, it emits a **tool call** — a structured request that says: "I want to use this tool, with these inputs." The harness intercepts this, checks permissions, executes the tool, and feeds the result back to the model.
+
+This is the moment thinking becomes doing. Before the tool call, the model is reasoning. After it, the world has changed — a file has been read, a command has run, a URL has been fetched.
+
+<Diagram />
+
+In Claude Code, tool calls often surface as permission prompts: *"Claude wants to write to src/App.tsx — Allow / Deny?"* That prompt is the harness intercepting a tool call before executing it. You are reviewing the decision before it takes effect.
+
+<Analogy>The model picks up the phone and dials. You see this in Claude Code as a permission prompt — the harness pausing the action so you can review it before the call goes through.</Analogy>
+
+<WhyItMatters accent="var(--accent-agent)">Recognising tool calls helps you understand when the model is thinking versus doing. It also helps you debug: if the model is stuck, it is often failing to choose the right tool, or calling it with wrong parameters.</WhyItMatters>
+
+<RelatedTerms ids={["tool", "agent-loop", "permission"]} />
+
+</ConceptSection>

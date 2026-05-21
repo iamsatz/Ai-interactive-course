@@ -1,0 +1,32 @@
+---
+id: "worktree"
+term: "Worktree"
+category: "power"
+order: 2
+oneLiner: "Multiple branches, folders, and Claude sessions running side by side."
+analogy: "Multiple monitors, each with a different Figma file open. Parallel work without switching context."
+whyItMatters: "Worktrees let you run parallel experiments — test two directions simultaneously."
+related: ["branch", "subagent"]
+---
+
+<ConceptSection id="worktree" term="Worktree" category="power" oneLiner="Multiple branches, folders, and Claude sessions running side by side.">
+
+A **worktree** is a Git feature that lets you check out multiple branches from the same repo simultaneously — each in its own directory. You can have three worktrees open: `main` in one folder, `feature/a` in another, `feature/b` in a third. Each has its own Claude Code session.
+
+This is different from opening the same project in multiple terminals. Those branches would conflict. Worktrees are Git-native — they share the same repo history without interfering with each other.
+
+<Diagram />
+
+Use cases:
+- Run two experiments side by side and compare results
+- Keep a stable `main` open while working on a feature branch
+- Assign different subagents to different worktrees in parallel
+- Hotfix on `main` without stopping your feature work
+
+<Analogy>Multiple monitors, each with a different Figma file open. Parallel work without switching context — each window independent, but all drawing from the same asset library.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Worktrees let you run parallel experiments without the friction of switching branches and waiting for changes to propagate. Test two directions simultaneously. Compare results. Keep production stable while feature work happens.</WhyItMatters>
+
+<RelatedTerms ids={["branch", "subagent"]} />
+
+</ConceptSection>

@@ -1,0 +1,31 @@
+---
+id: "subagent"
+term: "Subagent"
+category: "power"
+order: 1
+oneLiner: "Claude spinning up Claude. A specialised helper for one task."
+analogy: "Briefing a junior designer on a specific sub-task while you handle the bigger picture. Parallel execution."
+whyItMatters: "Subagents let you split complex problems. One agent per concern — faster, more focused results."
+related: ["agent-loop", "worktree"]
+---
+
+<ConceptSection id="subagent" term="Subagent" category="power" oneLiner="Claude spinning up Claude. A specialised helper for one task.">
+
+A **subagent** is a separate Claude instance that the main agent spawns to handle a discrete task. The main agent gives it a focused brief, it executes independently, and the result comes back. They can run in parallel — multiple subagents working simultaneously on different parts of a problem.
+
+You can trigger this explicitly with the Agent tool in Claude Code, or it happens automatically in systems built to parallelize work.
+
+<Diagram />
+
+When to use subagents:
+- Large tasks that break naturally into independent parts
+- When you want specialised focus — one agent reviewing code, another writing tests
+- Long background tasks (research, audits) while you continue interactive work
+
+<Analogy>Briefing a junior designer on a specific sub-task while you handle the bigger picture. Parallel execution — multiple things happening simultaneously, each focused, none blocked by the others.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Subagents let you split complex problems across multiple focused agents instead of one overloaded session. One agent per concern — faster, more focused results. The main agent coordinates; subagents execute.</WhyItMatters>
+
+<RelatedTerms ids={["agent-loop", "worktree"]} />
+
+</ConceptSection>

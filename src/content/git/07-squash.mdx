@@ -1,0 +1,33 @@
+---
+id: "squash"
+term: "Squash & Merge"
+category: "git"
+order: 7
+oneLiner: "Compresses every branch commit into one clean commit on main."
+analogy: "Flattening a messy Figma layer group into one tidy, named layer. Clean history."
+whyItMatters: "AI generates many small commits. Squash and merge cleans them into a single, meaningful entry."
+related: ["merge", "commit", "pr"]
+---
+
+<ConceptSection id="squash" term="Squash & Merge" category="git" oneLiner="Compresses every branch commit into one clean commit on main.">
+
+**Squash & merge** takes all the commits on a branch — however many, however messy — and collapses them into a single, clean commit that lands on `main`. You write one meaningful commit message for the whole feature, and the intermediate work disappears from the main history.
+
+The branch itself is deleted after squash & merge (typically). The small intermediate commits are gone from `main`'s history.
+
+<Diagram />
+
+This is the recommended merge strategy for AI-assisted work:
+- AI sessions generate 10–30 small commits in a typical feature
+- Most are not meaningful to future readers of the codebase
+- One commit per feature with a clear message is far more maintainable
+
+On GitHub: when opening a PR, choose **"Squash and merge"** from the merge button dropdown.
+
+<Analogy>Flattening a messy Figma layer group into one tidy, named layer. All the intermediate states collapse into one clean presentation. The messy work happened; it just doesn't need to be in the permanent record.</Analogy>
+
+<WhyItMatters accent="var(--accent-git)">AI generates many small commits — "attempt 1", "fix bug", "add missing semicolon". Squash and merge collapses them into a single, meaningful entry on main. Your codebase history stays readable. Future you will thank you.</WhyItMatters>
+
+<RelatedTerms ids={["merge", "commit", "pr"]} />
+
+</ConceptSection>

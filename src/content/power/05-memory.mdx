@@ -1,0 +1,34 @@
+---
+id: "memory"
+term: "CLAUDE.md / Memory"
+category: "power"
+order: 5
+oneLiner: "Your project's persistent notes for Claude. Context that doesn't expire between sessions."
+analogy: "A project brief pinned to the studio wall that Claude reads before every session. Without it, Claude forgets everything."
+whyItMatters: "The first thing to set up in any serious project. The difference between Claude as a tool and Claude as a collaborator."
+related: ["skill", "settings"]
+---
+
+<ConceptSection id="memory" term="CLAUDE.md / Memory" category="power" oneLiner="Your project's persistent notes for Claude. Context that doesn't expire between sessions.">
+
+By default, Claude remembers nothing between sessions. Every new conversation starts fresh. **CLAUDE.md** is the solution: a markdown file in your project root that Claude reads at the start of every session. Whatever you put in it becomes persistent context.
+
+Typical CLAUDE.md contents:
+- Project name and purpose
+- Tech stack and version constraints
+- File structure overview
+- Style rules ("never use Inter font", "always squash & merge")
+- Things Claude should never do
+- What's been built, what's next
+
+<Diagram />
+
+CLAUDE.md is the single biggest quality-of-life improvement for regular Claude Code users. Without it, you spend the first 5 minutes of every session re-establishing context. With it, Claude already knows.
+
+<Analogy>A project brief pinned to the studio wall that Claude reads before every session. Without it, Claude forgets everything — tech stack, style rules, project history — the moment you close the window.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">The first thing to set up in any serious project. It is the difference between Claude as a one-time tool and Claude as a collaborator who already knows your project. Write it once; update it as the project evolves.</WhyItMatters>
+
+<RelatedTerms ids={["skill", "settings"]} />
+
+</ConceptSection>

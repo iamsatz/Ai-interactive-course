@@ -1,0 +1,28 @@
+---
+id: "embedding"
+term: "Embedding"
+category: "llm"
+order: 6
+oneLiner: "A word's coordinates in concept-space."
+analogy: "\"Modern Scandinavian\" lives near \"minimalist Nordic\" on a map. A mood board, but for every concept the model knows."
+whyItMatters: "This is why AI understands synonyms, style transfers, and related ideas without being explicitly told."
+related: ["token", "prompt"]
+---
+
+<ConceptSection id="embedding" term="Embedding" category="llm" oneLiner="A word's coordinates in concept-space.">
+
+During training, a language model learns to represent every word, phrase, and concept as a **vector** — a list of numbers that act as coordinates in a high-dimensional space. Concepts with similar meanings end up with similar coordinates; they cluster together.
+
+This is how the model understands that "couch" and "sofa" mean the same thing, that "modern Scandinavian" is conceptually near "minimalist Nordic," or that "king − man + woman ≈ queen." It never looks up synonyms — it just measures distance in concept-space.
+
+<Diagram />
+
+You rarely interact with embeddings directly. But they are why AI can understand your intent even when your wording is imprecise, and why semantic search — searching for meaning, not keywords — works at all.
+
+<Analogy>"Modern Scandinavian" lives near "minimalist Nordic" on a map. A mood board, but for every concept the model knows — automatically organised by meaning, not alphabetically.</Analogy>
+
+<WhyItMatters accent="var(--accent-llm)">This is why AI understands synonyms, style transfers, and related ideas without being explicitly told. It is also the foundation of tools that let you search your documents by meaning, not by exact keyword match.</WhyItMatters>
+
+<RelatedTerms ids={["token", "prompt"]} />
+
+</ConceptSection>

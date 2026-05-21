@@ -1,0 +1,28 @@
+---
+id: "context-window"
+term: "Context Window"
+category: "llm"
+order: 3
+oneLiner: "How much the model can hold in mind at once."
+analogy: "A whiteboard that gets erased. You can write a lot — but past a certain size, older notes fall off the back."
+whyItMatters: "Long files, long conversations — they can push earlier context out. Know when this is happening."
+related: ["token", "memory"]
+---
+
+<ConceptSection id="context-window" term="Context Window" category="llm" oneLiner="How much the model can hold in mind at once.">
+
+The context window is the model's working memory — everything it can "see" at once. This includes the system prompt (instructions given before you), the entire conversation history, any documents or files you've pasted in, and the model's own previous responses.
+
+Today's frontier models hold roughly 200,000 tokens in their context window. That is a short novel's worth of text. It sounds like a lot — and it is — but in long agentic sessions it fills up faster than you expect.
+
+<Diagram />
+
+When the context window fills, **older content falls off the back**. The model genuinely cannot see it anymore. It is not ignoring you. The information is simply gone from its working memory.
+
+<Analogy>A whiteboard that gets erased. You can write a lot — but past a certain size, older notes fall off the back. The model is not being careless; it physically cannot hold more than its window allows.</Analogy>
+
+<WhyItMatters accent="var(--accent-llm)">Long files, long conversations — they can push earlier context out. When Claude starts contradicting instructions you gave at the start of a session, this is often why. Start a new session, or re-state key context.</WhyItMatters>
+
+<RelatedTerms ids={["token", "memory"]} />
+
+</ConceptSection>

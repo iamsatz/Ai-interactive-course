@@ -1,0 +1,30 @@
+---
+id: "harness"
+term: "Harness"
+category: "agent"
+order: 4
+oneLiner: "Everything around the model — the car around the engine."
+analogy: "Claude Code Desktop is the harness. The model is just the engine inside it. The UI, tools, and permissions are the chassis."
+whyItMatters: "The harness controls what the model can see, reach, and do. Know what's in yours before you open it up."
+related: ["tool", "mcp", "permission"]
+---
+
+<ConceptSection id="harness" term="Harness" category="agent" oneLiner="Everything around the model — the car around the engine.">
+
+The model is an engine. The **harness** is everything built around it — the UI, the file system access, the tools, the permission system, the conversation memory, the context management.
+
+Claude Code Desktop is a harness. Claude.ai is a harness. When a company builds a customer-service bot on top of Claude, the bot infrastructure is the harness.
+
+<Diagram />
+
+Different harnesses give the same underlying model radically different capabilities and constraints. A harness with file-write access, a terminal, and an MCP connection to your design tools is completely different from a harness that only lets you chat.
+
+Understanding your harness means knowing: what tools does it expose? What can Claude see? What requires permission? What is blocked entirely?
+
+<Analogy>Claude Code Desktop is the harness. The model is just the engine inside it. The UI, tools, permissions, and context management are the chassis. The model does not decide what it can reach — the harness does.</Analogy>
+
+<WhyItMatters accent="var(--accent-agent)">The harness controls what the model can see, reach, and do. The same Claude model running in a restrictive harness is far less capable than Claude in a harness with full tool access. Know what's in yours before you open it up.</WhyItMatters>
+
+<RelatedTerms ids={["tool", "mcp", "permission"]} />
+
+</ConceptSection>

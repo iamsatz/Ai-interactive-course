@@ -1,0 +1,28 @@
+---
+id: "repo"
+term: "Repo"
+category: "git"
+order: 1
+oneLiner: "A project under Git — every change recorded forever."
+analogy: "A version-controlled Figma file where every save is named, dated, and retrievable. Your safety net."
+whyItMatters: "If Claude breaks something, you can always roll back. No repo = no safety net."
+related: ["branch", "commit"]
+---
+
+<ConceptSection id="repo" term="Repo" category="git" oneLiner="A project under Git — every change recorded forever.">
+
+A **repository** (repo) is a directory that Git is tracking. Every change you commit is permanently recorded with who made it, when, and what changed. You can travel back to any commit in the project's history.
+
+Setting up a repo is a single command: `git init`. From that point, every `git commit` you make is a named snapshot in the timeline.
+
+<Diagram />
+
+For AI-assisted work, a repo is not optional — it is the foundation. Claude can edit, delete, and restructure files. If something goes wrong (and sometimes it will), the only reliable recovery path is `git reset` back to a clean commit. Without a repo, your only undo is Cmd+Z, which does not persist across sessions or multi-file changes.
+
+<Analogy>A version-controlled Figma file where every save is named, dated, and retrievable. You would never do client design work without version history — apply the same rule to code.</Analogy>
+
+<WhyItMatters accent="var(--accent-git)">If Claude breaks something, you can always roll back. No repo means no undo beyond Cmd+Z — which does not work across sessions, multi-file edits, or terminal changes. A repo is your safety net. Set it up before your first Claude Code session.</WhyItMatters>
+
+<RelatedTerms ids={["branch", "commit"]} />
+
+</ConceptSection>

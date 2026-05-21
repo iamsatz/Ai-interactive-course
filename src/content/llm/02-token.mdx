@@ -1,0 +1,28 @@
+---
+id: "token"
+term: "Token"
+category: "llm"
+order: 2
+oneLiner: "The chunk the model reads. Roughly a word or syllable."
+analogy: "\"Strawberry\" is two tokens. The model never sees letters — only chunks. It's reading in syllable-sized bites."
+whyItMatters: "Tokens determine cost and context limits. Every word you type (and every word it returns) costs tokens."
+related: ["context-window", "embedding"]
+---
+
+<ConceptSection id="token" term="Token" category="llm" oneLiner="The chunk the model reads. Roughly a word or syllable.">
+
+The model does not read letter by letter, or word by word. It reads in **tokens** — chunks of text that are roughly syllables or common word fragments. The word "strawberry" becomes two tokens: "Straw" and "berry." A space before a word is often its own token. Numbers and punctuation are tokenized differently from prose.
+
+This is how the model sees all text — including your prompt and its own response. Neither side ever sees raw letters.
+
+<Diagram />
+
+Tokenization matters for two practical reasons: **cost** and **limits**. Most AI APIs price by token. And every model has a finite context window measured in tokens — not words or pages.
+
+<Analogy>"Strawberry" is two tokens. The model never sees letters — only chunks. It's reading in syllable-sized bites, not character by character. Understanding this helps you predict cost and explains why certain words count as "more" than others.</Analogy>
+
+<WhyItMatters accent="var(--accent-llm)">Tokens determine cost and context limits. Every word you type — and every word the model returns — costs tokens. Long documents, long conversations, long outputs: all eat from the same budget.</WhyItMatters>
+
+<RelatedTerms ids={["context-window", "embedding"]} />
+
+</ConceptSection>

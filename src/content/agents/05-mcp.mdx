@@ -1,0 +1,28 @@
+---
+id: "mcp"
+term: "MCP"
+category: "agent"
+order: 5
+oneLiner: "Universal cable for connecting Claude to other tools."
+analogy: "USB-C for AI. One standard connector that works for Sketch, Figma, Notion, Slack, your browser. Anyone can build one."
+whyItMatters: "When someone says \"there's an MCP for that,\" they mean Claude can natively talk to that app. This is growing fast."
+related: ["tool", "harness"]
+---
+
+<ConceptSection id="mcp" term="MCP" category="agent" oneLiner="Universal cable for connecting Claude to other tools.">
+
+**MCP** stands for Model Context Protocol — a standard created by Anthropic that defines how AI models connect to external tools and services.
+
+Before MCP, every company that wanted to connect an AI to their app had to build a custom integration. MCP provides a common standard: if an app ships an MCP server, any compatible model can connect to it with the same configuration. No custom work needed.
+
+<Diagram />
+
+Today there are MCP servers for Figma, Sketch, Notion, Slack, GitHub, your browser, PostgreSQL, and many more. New ones appear weekly. The configuration lives in your `settings.json` — a few lines, no code.
+
+<Analogy>USB-C for AI. One standard connector that works for Figma, Slack, Notion, your browser — any app that ships an MCP server. Anyone can build one. Once you add it to your settings, Claude can natively work with that app.</Analogy>
+
+<WhyItMatters accent="var(--accent-agent)">When someone says "there's an MCP for that," they mean Claude can natively talk to that app — reading its data, taking actions, integrating into your actual workflow. The ecosystem is growing fast. Check before building custom integrations.</WhyItMatters>
+
+<RelatedTerms ids={["tool", "harness"]} />
+
+</ConceptSection>

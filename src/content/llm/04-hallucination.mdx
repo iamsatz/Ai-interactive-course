@@ -1,0 +1,28 @@
+---
+id: "hallucination"
+term: "Hallucination"
+category: "llm"
+order: 4
+oneLiner: "Confident autocomplete that is wrong."
+analogy: "The intern who presents a fake stat with full conviction. Polished delivery, fabricated source."
+whyItMatters: "Always verify facts, names, links, and numbers the model produces. Confidence is not accuracy."
+related: ["prompt", "temperature"]
+---
+
+<ConceptSection id="hallucination" term="Hallucination" category="llm" oneLiner="Confident autocomplete that is wrong.">
+
+A language model generates text by predicting what comes next based on patterns. Most of the time, those patterns lead to accurate outputs. But sometimes the model produces text that sounds correct, reads fluently, and is completely fabricated.
+
+This is a **hallucination**: a confident, plausible-sounding claim that is factually wrong. Common examples include fake citations, non-existent URLs, wrong historical dates, or invented product features. The troubling part is that the model's tone gives no signal — it sounds equally confident when it's right and when it's wrong.
+
+<Diagram />
+
+Hallucinations happen more often when you ask about: obscure facts, recent events after the model's training cutoff, specific numbers, and anything that requires precise recall rather than pattern completion.
+
+<Analogy>The intern who presents a fake stat with full conviction. Polished delivery, fabricated source. You would not cite that stat in a client presentation without checking it — apply the same rule to model outputs.</Analogy>
+
+<WhyItMatters accent="var(--accent-llm)">Always verify facts, names, links, and numbers the model produces. Confidence is not accuracy. Use the model for reasoning, drafting, and synthesis — not as a primary source of truth.</WhyItMatters>
+
+<RelatedTerms ids={["prompt", "temperature"]} />
+
+</ConceptSection>

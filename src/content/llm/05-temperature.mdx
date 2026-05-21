@@ -1,0 +1,30 @@
+---
+id: "temperature"
+term: "Temperature"
+category: "llm"
+order: 5
+oneLiner: "The dice-roll dial. Low = predictable. High = creative chaos."
+analogy: "A randomness slider on a generative brush. Same prompt, wildly different results at each extreme."
+whyItMatters: "Tune it for the job. Factual tasks want low temperature. Ideation wants higher. Most tools expose this."
+related: ["prompt", "hallucination"]
+---
+
+<ConceptSection id="temperature" term="Temperature" category="llm" oneLiner="The dice-roll dial. Low = predictable. High = creative chaos.">
+
+Temperature is a parameter that controls how much randomness is introduced into the model's output. It runs from 0.0 (fully deterministic) to 1.0 (highly random), though some models allow values above 1.
+
+At **low temperature (0.0–0.3)**: the model always picks the most likely next token. Same prompt, same answer, every time. Best for: code, factual answers, structured data extraction.
+
+At **high temperature (0.7–1.0)**: the model samples from a wider range of possibilities. Same prompt, different outputs on each run. Best for: brainstorming, creative writing, generating options.
+
+<Diagram />
+
+Most consumer tools (including Claude) set a default temperature behind the scenes. But developer APIs, Claude Code, and many advanced tools expose it as a setting you can tune.
+
+<Analogy>A randomness slider on a generative brush. Same prompt, wildly different results at each extreme. Turn it up for ideation. Turn it down when you need the model to be deterministic and precise.</Analogy>
+
+<WhyItMatters accent="var(--accent-llm)">Tune temperature for the job. Factual extraction needs low temperature — you want the most likely, most consistent answer. Creative ideation benefits from higher temperature — you want diversity, not the obvious first response.</WhyItMatters>
+
+<RelatedTerms ids={["prompt", "hallucination"]} />
+
+</ConceptSection>

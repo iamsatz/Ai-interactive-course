@@ -1,0 +1,32 @@
+---
+id: "pr"
+term: "Pull Request (PR)"
+category: "git"
+order: 5
+oneLiner: "Proposing changes from a branch back into main."
+analogy: "Sending a design file for review before it goes live. A checkpoint before changes are permanent."
+whyItMatters: "Even solo, PRs create a review gate. Especially important when Claude wrote the changes."
+related: ["branch", "diff", "merge"]
+---
+
+<ConceptSection id="pr" term="Pull Request (PR)" category="git" oneLiner="Proposing changes from a branch back into main.">
+
+A **Pull Request** (PR) is a formal proposal to merge changes from a branch into `main`. On GitHub, GitLab, or similar platforms, you open a PR when you're ready to integrate. It shows the full diff, lets collaborators comment, runs CI checks, and requires approval before merging.
+
+Even if you're working solo, PRs are worth using for AI-assisted work. They give you a structured moment to review everything Claude changed — the full diff across all files — before it becomes permanent history on `main`.
+
+<Diagram />
+
+For solo AI work, the PR workflow looks like:
+1. Branch → Claude session → commit
+2. Open a PR (even a draft PR to yourself)
+3. Review the full diff
+4. Squash and merge when satisfied
+
+<Analogy>Sending a design file for review before it goes live. A checkpoint before changes are permanent. The PR is the moment you shift from "experimenting" to "shipping."</Analogy>
+
+<WhyItMatters accent="var(--accent-git)">Even solo, PRs create a review gate. The diff view on GitHub or VS Code is often clearer than Claude's inline diff view. For AI-generated changes especially, the PR is your final checkpoint before the code is part of your permanent history.</WhyItMatters>
+
+<RelatedTerms ids={["branch", "diff", "merge"]} />
+
+</ConceptSection>

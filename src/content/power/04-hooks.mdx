@@ -1,0 +1,32 @@
+---
+id: "hooks"
+term: "Hooks"
+category: "power"
+order: 4
+oneLiner: "Scripts that fire automatically on Claude Code events."
+analogy: "\"Whenever I commit, run the formatter.\" Automation glue that triggers on actions you already take."
+whyItMatters: "Hooks eliminate repetitive steps — auto-format, auto-test, auto-notify on every commit."
+related: ["settings", "dispatch"]
+---
+
+<ConceptSection id="hooks" term="Hooks" category="power" oneLiner="Scripts that fire automatically on Claude Code events.">
+
+**Hooks** are shell scripts that execute automatically when specific Claude Code events occur. You define them in `settings.json`. The harness runs them — not Claude — so they execute reliably regardless of what Claude is doing.
+
+Events you can hook into:
+- `PreToolUse` — before Claude uses a tool
+- `PostToolUse` — after a tool completes
+- `Notification` — when Claude wants to notify you
+- `Stop` — when a Claude session ends
+
+<Diagram />
+
+Example uses: run your formatter automatically after every file write. Send a Slack message when a long Dispatch task finishes. Log all tool calls to a file for auditing. Block certain tool calls based on custom rules.
+
+<Analogy>"Whenever I commit, run the formatter." The same mental model as any event-based automation — webhook, GitHub Action, Zapier trigger. Event fires, script runs, done.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Hooks eliminate repetitive steps that you would otherwise have to remember or re-explain. They run at the harness level — guaranteed execution, not dependent on Claude's decisions. Start with read-only hooks (log, notify) before adding write or execute hooks.</WhyItMatters>
+
+<RelatedTerms ids={["settings", "dispatch"]} />
+
+</ConceptSection>

@@ -1,0 +1,33 @@
+---
+id: "permission"
+term: "Permission"
+category: "claude"
+order: 3
+oneLiner: "The harness asking before doing something risky."
+analogy: "Like a dialog box: \"Can I write this file?\" You can tune how often it asks — from cautious to trust-by-default."
+whyItMatters: "Permissions keep you in control. Know which ones to allow automatically and which to always review."
+related: ["harness", "tool-call", "settings"]
+---
+
+<ConceptSection id="permission" term="Permission" category="claude" oneLiner="The harness asking before doing something risky.">
+
+**Permissions** are the harness's way of making sure you review an action before it executes. When Claude wants to write a file, run a terminal command, or delete something, it can be configured to pause and ask first.
+
+The permission system has three modes per action type:
+- **Ask** — prompt the user before every execution
+- **Allow** — execute automatically, no interruption
+- **Deny** — never execute this action
+
+<Diagram />
+
+You configure these in `settings.json`. New users should start with "ask" on writes and deletes. As you develop trust in your setup and understand what Claude is doing, you can move some actions to "allow."
+
+Never set destructive operations (delete, overwrite) to auto-allow until you genuinely understand the context.
+
+<Analogy>Like a dialog box: "Can I write this file?" Familiar from every OS. The difference is you can configure the threshold — from "ask me about everything" to "just do it." Start cautious, relax as trust builds.</Analogy>
+
+<WhyItMatters accent="var(--accent-claude)">Permissions keep you in control of an agent that can modify your files and run commands. They are the brake pedal — you want it to work before you drive fast. Know which ones to allow automatically and which to always review.</WhyItMatters>
+
+<RelatedTerms ids={["harness", "tool-call", "settings"]} />
+
+</ConceptSection>

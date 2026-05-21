@@ -1,0 +1,30 @@
+---
+id: "merge"
+term: "Merge"
+category: "git"
+order: 6
+oneLiner: "Joins two branches. Full history preserved — every commit."
+analogy: "Merging two Figma files with every layer history intact. Complete, but potentially messy."
+whyItMatters: "Use merge when full commit history matters. For AI-generated code, prefer squash & merge."
+related: ["squash", "branch", "pr"]
+---
+
+<ConceptSection id="merge" term="Merge" category="git" oneLiner="Joins two branches. Full history preserved — every commit.">
+
+When you **merge** a branch into `main`, every commit from that branch becomes part of `main`'s history. The branch's full timeline — every intermediate commit, every fix, every "oops" commit — is preserved.
+
+This is useful when you want complete auditability: every step in the development process is traceable.
+
+<Diagram />
+
+For AI-assisted work, standard merge has a downside: AI sessions tend to generate many small commits with messages like "fix typo," "try this approach," "undo last change." Merging them all into `main` creates a noisy, hard-to-read history.
+
+This is why **squash & merge** is usually preferred for AI work — but understanding standard merge helps you choose deliberately.
+
+<Analogy>Merging two Figma files with every layer history intact. Complete, but potentially messy. Every intermediate state is preserved. Useful when you need full traceability; less useful when you just want a clean milestone.</Analogy>
+
+<WhyItMatters accent="var(--accent-git)">Use merge when full commit history matters — for regulatory traceability, collaborative codebases, or when every step in the process needs to be auditable. For typical AI-assisted sessions, squash & merge produces a much cleaner result.</WhyItMatters>
+
+<RelatedTerms ids={["squash", "branch", "pr"]} />
+
+</ConceptSection>

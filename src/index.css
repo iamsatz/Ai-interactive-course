@@ -1,0 +1,92 @@
+@import './styles/fonts.css';
+@import './styles/tokens.css';
+@import 'tailwindcss';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-base);
+  color: var(--ink-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.65;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--ink-primary);
+  margin: 0;
+}
+
+code, kbd, pre {
+  font-family: var(--font-mono);
+}
+
+code {
+  background: var(--border);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+:focus-visible {
+  outline: 2px solid var(--ink-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.prose-concept p {
+  color: var(--ink-secondary);
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+.prose-concept p:last-child { margin-bottom: 0; }
+.prose-concept strong { color: var(--ink-primary); font-weight: 600; }
+
+/* ── Diagrams ────────────────────────────────────────────────
+   Scale SVGs up so their labels are legible.
+   The viewBox keeps all positioning intact; we just render bigger.
+   ──────────────────────────────────────────────────────────── */
+.prose-concept svg {
+  width: min(100%, 560px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Bump all SVG text labels — overrides inline fontSize attributes */
+.prose-concept svg text {
+  font-size: 13px;
+  font-family: var(--font-body);
+}
+
+/* Keep mono labels in mono */
+.prose-concept svg text[font-family*="mono"],
+.prose-concept svg text[fontFamily*="mono"] {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* Preserve large accent / display numbers */
+.prose-concept svg text[font-size="18"],
+.prose-concept svg text[font-size="22"],
+.prose-concept svg text[fontSize="18"],
+.prose-concept svg text[fontSize="22"] {
+  font-size: 22px;
+}

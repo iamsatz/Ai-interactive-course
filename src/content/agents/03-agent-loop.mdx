@@ -1,0 +1,34 @@
+---
+id: "agent-loop"
+term: "Agent Loop"
+category: "agent"
+order: 3
+oneLiner: "Look → decide → act → look. The whole \"agent\" in six lines of code."
+analogy: "A design review cycle: observe the problem, identify a fix, make the change, review the result. Repeat."
+whyItMatters: "Once you see the loop, multi-step tasks make sense. The model isn't magic — it's iteration."
+related: ["tool-call", "harness", "subagent"]
+---
+
+<ConceptSection id="agent-loop" term="Agent Loop" category="agent" oneLiner='Look → decide → act → look. The whole "agent" in six lines of code.'>
+
+An agent is not a special type of model. It is a model running inside a loop:
+
+1. **Look** — read the current state (files, messages, tool results)
+2. **Decide** — reason about what to do next
+3. **Act** — call a tool or produce output
+4. **Look again** — incorporate the result of the action
+5. Repeat until done
+
+That is the entire architecture of agentic AI. The magic is not in the model — it is in the loop running around it.
+
+<Diagram />
+
+When Claude Code builds a feature for you, it is running this loop dozens of times: reading files, editing them, running tests, reading the test output, fixing failures, reading the fixed output, and so on until the task is complete.
+
+<Analogy>A design review cycle: observe the problem, identify a fix, make the change, review the result. Repeat. Not magic — deliberate iteration with feedback at every step.</Analogy>
+
+<WhyItMatters accent="var(--accent-agent)">Once you see the loop, multi-step tasks make sense. "How did Claude figure out where the bug was?" — it read the file, saw the error, made a change, ran the test again, saw it fail differently, and reasoned from there. Iteration, not omniscience.</WhyItMatters>
+
+<RelatedTerms ids={["tool-call", "harness", "subagent"]} />
+
+</ConceptSection>

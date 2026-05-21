@@ -1,0 +1,32 @@
+---
+id: "settings"
+term: "settings.json"
+category: "claude"
+order: 4
+oneLiner: "Where Claude Code Desktop's config lives."
+analogy: "Your Preferences file — permissions, environment variables, hooks, and MCP connections all go here."
+whyItMatters: "One file controls what Claude can do and see. Understand it before you open it up."
+related: ["permission", "hooks", "memory"]
+---
+
+<ConceptSection id="settings" term="settings.json" category="claude" oneLiner="Where Claude Code Desktop's config lives.">
+
+`settings.json` is the configuration file for Claude Code. Everything about how Claude behaves in your environment is defined here: which tools it can use, at what permission level, which external apps it can connect to, which environment variables it can see, and which hooks fire on which events.
+
+<Diagram />
+
+The file has a local (project-level) version and a global (user-level) version. Project settings override global ones. Most teams commit a project `settings.json` to their repo so everyone on the team has the same Claude setup.
+
+Key sections:
+- **permissions** — allow/ask/deny per tool type
+- **mcpServers** — MCP connections (Figma, Notion, etc.)
+- **env** — environment variables Claude can access
+- **hooks** — scripts that fire on Claude Code events
+
+<Analogy>Your Preferences file — the single place where you declare what Claude can reach, what requires permission, and what automation fires automatically. Change it deliberately.</Analogy>
+
+<WhyItMatters accent="var(--accent-claude)">One file controls what Claude can do and see. A misconfigured settings.json can give Claude too much access or break its ability to function. Understand each section before you change it — and keep a backup.</WhyItMatters>
+
+<RelatedTerms ids={["permission", "hooks", "memory"]} />
+
+</ConceptSection>

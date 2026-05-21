@@ -1,0 +1,28 @@
+---
+id: "tool"
+term: "Tool"
+category: "agent"
+order: 1
+oneLiner: "Anything the model can do beyond talking."
+analogy: "Read a file. Talk to Sketch. Fetch a URL. Tools are the hands — without them, it's just text."
+whyItMatters: "Tools are what make agents actually useful for real work. The more tools, the more capable."
+related: ["tool-call", "mcp", "harness"]
+---
+
+<ConceptSection id="tool" term="Tool" category="agent" oneLiner="Anything the model can do beyond talking.">
+
+A language model on its own can only produce text. **Tools** are what allow it to act in the world — to read and write files, search the web, run terminal commands, call external APIs, interact with other software.
+
+When you use Claude Code and it reads your codebase, that is a tool. When it writes a file, runs a test, or fetches a URL — all tools. Each tool is a discrete capability that the model can call by name with specific parameters.
+
+<Diagram />
+
+Tools are defined and granted by the harness — the environment running the model. You do not write tools to use them; you configure which ones the model has access to.
+
+<Analogy>Read a file. Talk to Sketch. Fetch a URL. Tools are the hands — without them, it's just text. A model with no tools is a very smart dictionary that can only speak. A model with tools can act.</Analogy>
+
+<WhyItMatters accent="var(--accent-agent)">Tools are what make agents actually useful for real work. The difference between "Claude answered my question" and "Claude built my feature" is entirely the set of tools it had available.</WhyItMatters>
+
+<RelatedTerms ids={["tool-call", "mcp", "harness"]} />
+
+</ConceptSection>

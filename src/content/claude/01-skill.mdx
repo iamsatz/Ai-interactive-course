@@ -1,0 +1,28 @@
+---
+id: "skill"
+term: "Skill"
+category: "claude"
+order: 1
+oneLiner: "An encoded workflow that wears your taste."
+analogy: "A saved Action in Photoshop — but for your entire design-to-development process. It runs your way, every time."
+whyItMatters: "Skills mean you stop re-explaining your process. Encode it once; Claude runs it on demand."
+related: ["slash-command", "memory"]
+---
+
+<ConceptSection id="skill" term="Skill" category="claude" oneLiner="An encoded workflow that wears your taste.">
+
+A **Skill** is a reusable workflow written as a markdown file that Claude reads and executes. It encodes your process — not just "do this task" but "do this task, the way I like it done, with these preferences and quality checks."
+
+Skills are files in your project (or stored globally) with a `.md` extension. They describe steps, constraints, style rules, and expected outputs. When you trigger one, Claude reads the skill file first, then executes the workflow it describes.
+
+<Diagram />
+
+Examples of things people encode as skills: their code review process, their Figma-to-code workflow, their commit message format, their documentation style, their testing approach.
+
+<Analogy>A saved Action in Photoshop — but for your entire design-to-development process. It runs your way, every time, without you re-explaining your preferences. The workflow has your taste baked in.</Analogy>
+
+<WhyItMatters accent="var(--accent-claude)">Skills mean you stop re-explaining your process to Claude at the start of every session. Encode it once; it runs on demand. This is the difference between Claude as a tool you configure and Claude as a collaborator who already knows how you work.</WhyItMatters>
+
+<RelatedTerms ids={["slash-command", "memory"]} />
+
+</ConceptSection>

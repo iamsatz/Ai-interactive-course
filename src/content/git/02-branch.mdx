@@ -1,0 +1,31 @@
+---
+id: "branch"
+term: "Branch"
+category: "git"
+order: 2
+oneLiner: "A parallel copy. Experiment without touching the main version."
+analogy: "Duplicating a Sketch page before trying something risky. Main stays clean; you experiment on the copy."
+whyItMatters: "Branch before every Claude Code session. This is non-negotiable. It is your undo."
+related: ["repo", "commit", "merge"]
+---
+
+<ConceptSection id="branch" term="Branch" category="git" oneLiner="A parallel copy. Experiment without touching the main version.">
+
+A **branch** is a parallel line of development. When you create a branch, you get a complete copy of the project at that point. Changes on the branch stay isolated — they do not affect `main` (or any other branch) until you explicitly merge them.
+
+Creating a branch is instant and costs nothing: `git checkout -b my-feature`.
+
+<Diagram />
+
+**Branch before every Claude Code session.** This is the single most important workflow habit for AI-assisted development. When you work on a branch:
+- Claude's changes cannot touch your stable `main`
+- If the session goes sideways, you can delete the branch and start fresh
+- You can review all changes as a diff before merging
+
+<Analogy>Duplicating a Sketch page before trying something risky. Main stays clean; you experiment on the copy. If the experiment fails, you delete the copy. If it works, you promote it.</Analogy>
+
+<WhyItMatters accent="var(--accent-git)">Branch before every Claude Code session. This is non-negotiable. Without a branch, AI changes land directly on your stable code. One bad session can require hours of manual cleanup. A branch costs two seconds and gives you a complete safety net.</WhyItMatters>
+
+<RelatedTerms ids={["repo", "commit", "merge"]} />
+
+</ConceptSection>

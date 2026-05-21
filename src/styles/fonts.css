@@ -1,0 +1,12 @@
+/* Sentient — display serif for headings (Fontshare / Indian Type Foundry) */
+@import url('https://api.fontshare.com/v2/css?f[]=sentient@400,400i,700,700i&display=swap');
+
+/* Geist — Vercel's font, loaded via CDN */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-display: 'Sentient', Georgia, serif;
+  --font-body:    'Geist', system-ui, sans-serif;
+  --font-mono:    'Geist Mono', 'Courier New', monospace;
+}
