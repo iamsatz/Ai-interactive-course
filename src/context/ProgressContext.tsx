@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useCallback } from 'react'
 import type { ReactNode } from 'react'
 
 const STORAGE_KEY = 'ai-field-guide-progress'
-const TOTAL_CONCEPTS = 27
+const TOTAL_CONCEPTS = 32
 
 function loadProgress(): Set<string> {
   try {

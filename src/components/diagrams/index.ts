@@ -26,6 +26,11 @@ import { WorktreeDiagram } from './WorktreeDiagram'
 import { DispatchDiagram } from './DispatchDiagram'
 import { HooksDiagram } from './HooksDiagram'
 import { MemoryDiagram } from './MemoryDiagram'
+import { ForkDiagram } from './ForkDiagram'
+import { CompactionDiagram } from './CompactionDiagram'
+import { PlanModeDiagram } from './PlanModeDiagram'
+import { ClaudeMdDiagram } from './ClaudeMdDiagram'
+import { AutoAcceptDiagram } from './AutoAcceptDiagram'
 
 export const diagramMap: Record<string, ComponentType> = {
   'prompt': PromptDiagram,
@@ -55,4 +60,9 @@ export const diagramMap: Record<string, ComponentType> = {
   'dispatch': DispatchDiagram,
   'hooks': HooksDiagram,
   'memory': MemoryDiagram,
+  'fork': ForkDiagram,
+  'compaction': CompactionDiagram,
+  'plan-mode': PlanModeDiagram,
+  'claude-md': ClaudeMdDiagram,
+  'auto-accept': AutoAcceptDiagram,
 }

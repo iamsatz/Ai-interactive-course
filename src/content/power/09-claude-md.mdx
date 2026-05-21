@@ -1,0 +1,37 @@
+---
+id: "claude-md"
+term: "CLAUDE.md"
+category: "power"
+order: 9
+oneLiner: "The project memory file. Claude reads it at the start of every session."
+analogy: "An onboarding doc for a new collaborator who restarts every morning."
+whyItMatters: "Without CLAUDE.md, you re-explain your project every session. With it, every new session starts already oriented."
+related: ["memory", "settings", "fork"]
+---
+
+<ConceptSection id="claude-md" term="CLAUDE.md" category="power" oneLiner="The project memory file. Claude reads it at the start of every session.">
+
+CLAUDE.md is a plain markdown file you put at the root of any project. Claude Code reads it automatically at the start of every session, no setup required. Whatever you write in it becomes part of the model's working context for that project.
+
+It's the difference between starting every session with "let me explain how this project works…" and starting with "okay, now let's build the feature."
+
+<Diagram />
+
+What to put in a good CLAUDE.md:
+
+- **Project name + what it does** (one paragraph)
+- **Tech stack** — frameworks, runtime, key dependencies
+- **File structure** — where things live, naming conventions
+- **What's built / what's next** — current state, near-term priorities
+- **Style rules** — code style, copy tone, design constraints
+- **Never do this** — the list of mistakes Claude keeps making that you keep correcting
+
+Treat it like a living document. After every session, ask: "What did I have to re-explain today?" Add that to CLAUDE.md so you don't explain it again.
+
+<Analogy>Onboarding for a new collaborator who shows up every morning with full amnesia. You can't spend an hour every day re-orienting them. You write it down once. They read it. You both get back to work.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Most learners stumble onto CLAUDE.md by accident. The ones who do see an immediate quality jump — Claude stops asking obvious questions, stops introducing the wrong patterns, stops touching files it shouldn't. The file pays for itself in one session.</WhyItMatters>
+
+<RelatedTerms ids={["memory", "settings", "fork"]} />
+
+</ConceptSection>

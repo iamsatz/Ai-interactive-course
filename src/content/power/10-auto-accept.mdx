@@ -1,0 +1,35 @@
+---
+id: "auto-accept"
+term: "Auto-accept"
+category: "power"
+order: 10
+oneLiner: "Skip the approval prompt for safe tool calls. Keep the prompt for risky ones."
+analogy: "Like cruise control — works great on the highway, off on the back roads."
+whyItMatters: "Auto-accept everything = silent disasters. Ask everything = constant interruption. The middle is the sweet spot most learners never find."
+related: ["permission", "settings", "plan-mode"]
+---
+
+<ConceptSection id="auto-accept" term="Auto-accept" category="power" oneLiner="Skip the approval prompt for safe tool calls. Keep the prompt for risky ones.">
+
+Auto-accept lets you tell Claude Code: "for this specific kind of action, don't ask me — just do it." Configured granularly per tool. Read a file? Auto-accept. Run a bash command? Probably not. Edit a file? Maybe — depends on where.
+
+The default Claude Code experience is "ask every time" — safe, slow. The temptation is to flip everything to "allow" — fast, dangerous. The right answer is in between, and depends on your context.
+
+<Diagram />
+
+A sane starting profile:
+
+- **Read, Grep, Glob, WebFetch** → auto-accept (read-only, no harm)
+- **Edit, Write** → ask (especially in dirty branches)
+- **Bash** → ask (almost always — too much can go wrong)
+- **Permission flips for client repos** → ask everything
+
+The trick: maintain two profiles. One for solo experiments on throwaway branches — generous auto-accept. One for client work — paranoid. Switch profiles based on context.
+
+<Analogy>Cruise control. On the highway, hands-off saves attention for the road ahead. On twisty back roads, you want both hands on the wheel. Pick the right mode for the terrain.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Auto-accept is the only knob that controls the speed-vs-safety tradeoff. Most learners either leave it off (too slow) or flip it all on (too risky). Tuning it well is what separates "I use Claude Code" from "I use Claude Code productively."</WhyItMatters>
+
+<RelatedTerms ids={["permission", "settings", "plan-mode"]} />
+
+</ConceptSection>

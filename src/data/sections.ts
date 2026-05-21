@@ -48,10 +48,10 @@ export const sections: Section[] = [
   {
     id: 'power',
     title: 'Power User',
-    description: 'Parallel agents, async work, and persistent memory.',
+    description: 'Parallel agents, forks, plan mode, project memory — the moves you don\'t know to ask about.',
     accent: 'var(--accent-power)',
     order: 5,
-    conceptCount: 5,
+    conceptCount: 10,
     nextId: null,
   },
 ]

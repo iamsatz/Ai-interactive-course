@@ -1,0 +1,32 @@
+---
+id: "compaction"
+term: "Compaction"
+category: "power"
+order: 7
+oneLiner: "Claude summarizes its own history when context gets long. You can also trigger it manually."
+analogy: "Like clearing your desk halfway through a project. Keep the decisions, drop the receipts."
+whyItMatters: "Compaction saves sessions from context death. Knowing when to trigger it manually makes long projects sustainable."
+related: ["context-window", "fork", "memory"]
+---
+
+<ConceptSection id="compaction" term="Compaction" category="power" oneLiner="Claude summarizes its own history when context gets long. You can also trigger it manually.">
+
+Every Claude Code session has a context window — finite tokens. When you fill it, older messages get pushed out and the model starts forgetting things. Compaction is the fix: Claude summarizes earlier parts of the conversation into a shorter form, freeing room for new work.
+
+It happens two ways:
+
+**Automatic** — Claude Code triggers compaction when context fills past a threshold. You'll see a notice; the session continues with a summarized history.
+
+**Manual** — Run `/compact` whenever you feel the session getting heavy. Don't wait for auto-compaction. Triggering early gives you cleaner context for the next chunk of work.
+
+<Diagram />
+
+What survives compaction: major decisions, file paths you've been editing, your CLAUDE.md, anything Claude explicitly tagged as important. What gets summarized: search noise, intermediate tool outputs, exploratory back-and-forth that's no longer relevant.
+
+<Analogy>Clearing your desk halfway through a long project. Sketches go in the bin. Final notes get pinned to the board. You keep moving with the things that still matter.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Long sessions without compaction degrade. The model starts contradicting itself, forgetting your constraints, repeating earlier steps. Manual compaction at the right moment — before a heavy task, after finishing a sub-goal — keeps the session sharp.</WhyItMatters>
+
+<RelatedTerms ids={["context-window", "fork", "memory"]} />
+
+</ConceptSection>

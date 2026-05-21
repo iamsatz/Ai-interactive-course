@@ -10,6 +10,8 @@ const termToSection: Record<string, string> = {
   'pr': 'git', 'merge': 'git', 'squash': 'git',
   'subagent': 'power', 'worktree': 'power', 'dispatch': 'power',
   'hooks': 'power', 'memory': 'power',
+  'fork': 'power', 'compaction': 'power', 'plan-mode': 'power',
+  'claude-md': 'power', 'auto-accept': 'power',
 }
 
 const termLabels: Record<string, string> = {
@@ -23,6 +25,8 @@ const termLabels: Record<string, string> = {
   'pr': 'Pull Request', 'merge': 'Merge', 'squash': 'Squash & Merge',
   'subagent': 'Subagent', 'worktree': 'Worktree', 'dispatch': 'Dispatch',
   'hooks': 'Hooks', 'memory': 'CLAUDE.md / Memory',
+  'fork': 'Fork', 'compaction': 'Compaction', 'plan-mode': 'Plan Mode',
+  'claude-md': 'CLAUDE.md', 'auto-accept': 'Auto-accept',
 }
 
 interface RelatedTermsProps {

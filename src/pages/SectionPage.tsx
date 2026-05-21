@@ -13,6 +13,8 @@ import { Diagram } from '@/components/mdx/Diagram'
 import { Analogy } from '@/components/mdx/Analogy'
 import { WhyItMatters } from '@/components/mdx/WhyItMatters'
 import { RelatedTerms } from '@/components/mdx/RelatedTerms'
+import { TaskList } from '@/components/mdx/TaskList'
+import { Confusions } from '@/components/section/Confusions'
 
 type MDXModule = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -36,6 +38,7 @@ const mdxComponents = {
   Analogy,
   WhyItMatters,
   RelatedTerms,
+  TaskList,
 }
 
 export function SectionPage() {
@@ -108,6 +111,9 @@ export function SectionPage() {
             {concepts.length} concepts · scroll through at your own pace
           </p>
         </motion.div>
+
+        {/* Common confusions — shown BEFORE concepts to head off wrong mental models */}
+        <Confusions sectionId={sectionId ?? ''} accent={section.accent} />
 
         {/* Concepts — pass components directly, no MDXProvider needed */}
         <div className="space-y-0">

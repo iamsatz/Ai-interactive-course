@@ -1,0 +1,34 @@
+---
+id: "fork"
+term: "Fork"
+category: "power"
+order: 6
+oneLiner: "Branch the conversation. Try a risky move without losing the safe path."
+analogy: "Like git branch — but for your chat. Detour, experiment, come back."
+whyItMatters: "Forking is the cheapest token-saving move you can make on long sessions. Don't restart — fork."
+related: ["worktree", "compaction", "memory"]
+---
+
+<ConceptSection id="fork" term="Fork" category="power" oneLiner="Branch the conversation. Try a risky move without losing the safe path.">
+
+A fork is a copy of your current Claude Code session at a specific point in time. You keep working on the original. You can also work on the fork. Either path can be abandoned without affecting the other.
+
+It's the conversation equivalent of `git branch`. And like branches, it's the difference between confidently trying something and being afraid to break what works.
+
+<Diagram />
+
+The two big reasons to fork:
+
+**Risky refactor.** You're 40 messages into a session, the context is rich, and you want to try a big change. Fork before you ask. If the change goes sideways, return to the trunk — the safe path still exists, fully loaded with context.
+
+**Parallel exploration.** You want to try Approach A and Approach B for the same problem. Fork once. Try A in one fork, B in the other. Compare. Keep the better one.
+
+The cost saving is real. Without forking, you'd either commit to one direction (and have to undo if wrong) or start fresh and replay all the context (10–40k tokens depending on session length). Forking preserves the context for free.
+
+<Analogy>Git branch, but for chat. You're not throwing anything away — you're trying something on a side path. If it works, merge it back into your thinking. If it doesn't, the trunk is exactly where you left it.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Most students don't know about fork at all. They restart sessions when things go wrong — paying the full token cost of re-loading context every time. Fork is the cheapest power move in Claude Code. Once you internalize it, you'll fork before every meaningful detour.</WhyItMatters>
+
+<RelatedTerms ids={["worktree", "compaction", "memory"]} />
+
+</ConceptSection>

@@ -1,0 +1,35 @@
+---
+id: "plan-mode"
+term: "Plan Mode"
+category: "power"
+order: 8
+oneLiner: "Claude writes a plan before doing anything. You approve, edit, or reject it first."
+analogy: "Like making a designer sketch the wireframe before they start in Figma."
+whyItMatters: "Catching a bad plan takes 30 seconds. Undoing a bad refactor takes 30 minutes. Plan mode pays for itself the first time it saves you."
+related: ["agent-loop", "permission", "claude-md"]
+---
+
+<ConceptSection id="plan-mode" term="Plan Mode" category="power" oneLiner="Claude writes a plan before doing anything. You approve, edit, or reject it first.">
+
+Plan mode is an explicit "stop and think" step. Instead of jumping straight into edits, Claude proposes a structured plan: what files it will touch, what changes it will make, what order, what to test. You read it. You approve, edit, or reject.
+
+This is the opposite of how chat normally works. Normally you ask, the model acts. In plan mode, you ask, the model plans, you confirm, then it acts.
+
+<Diagram />
+
+When plan mode earns its keep:
+
+- **Multi-file refactors.** Seeing the full file list before any edit happens.
+- **Anything you'd need to undo.** Reading the plan is cheaper than reading the diff later.
+- **Unfamiliar codebases.** The plan forces Claude to articulate its mental model — and you can catch wrong assumptions.
+- **Scoping a new feature.** Use the plan itself as your design doc.
+
+Plan mode adds latency (one extra round trip for the plan). It also adds clarity. For trivial tasks, skip it. For anything non-trivial, demand it.
+
+<Analogy>Asking a designer to sketch the wireframe before they touch Figma. You can change direction on a sketch in seconds. Changing direction once a high-fidelity comp is built costs an afternoon.</Analogy>
+
+<WhyItMatters accent="var(--accent-power)">Plan mode is how you reclaim control of an agent loop. Without it, Claude proposes-and-acts in a single step. With it, you get a checkpoint — a moment where wrong assumptions are surfaced before they become wrong code.</WhyItMatters>
+
+<RelatedTerms ids={["agent-loop", "permission", "claude-md"]} />
+
+</ConceptSection>
