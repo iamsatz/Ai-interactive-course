@@ -11,29 +11,32 @@ const apps = [
 export function MCPDiagram() {
   const { inView } = useConceptContext()
   return (
-    
-      <svg width="340" height="160" viewBox="0 0 340 160" fill="none">
+      <svg width="340" height="190" viewBox="0 0 340 190" fill="none">
         {/* Claude box */}
         <rect x="10" y="60" width="80" height="40" rx="8"
           fill="var(--bg-card)" stroke="var(--ink-primary)" strokeWidth="1.5" />
-        <text x="50" y="85" textAnchor="middle" fontSize="11"
+        <text x="50" y="84" textAnchor="middle" fontSize="11"
           fill="var(--ink-primary)" fontFamily="var(--font-body)">Claude</text>
 
-        {/* MCP hub */}
+        {/* MCP hub — circle holds only the acronym */}
         <motion.circle cx="175" cy="80" r="22"
           fill="var(--bg-card)" stroke="var(--accent-agent)" strokeWidth="1.5"
           initial={{ scale: 0 }} animate={inView ? { scale: 1 } : { scale: 0 }}
           transition={{ delay: 0.3, duration: 0.4 }}
         />
-        <motion.text x="175" y="77" textAnchor="middle" fontSize="9"
+        <motion.text x="175" y="84" textAnchor="middle" fontSize="11"
+          fontWeight="500"
           fill="var(--accent-agent)" fontFamily="var(--font-mono)"
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.6 }}
         >MCP</motion.text>
-        <motion.text x="175" y="89" textAnchor="middle" fontSize="7.5"
+
+        {/* Caption below the circle — the subtitle lives here, with room */}
+        <motion.text x="175" y="120" textAnchor="middle" fontSize="9"
           fill="var(--ink-muted)" fontFamily="var(--font-body)"
+          fontStyle="italic"
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.8 }}
         >USB-C for AI</motion.text>
 
         {/* Line Claude → MCP */}
@@ -54,8 +57,8 @@ export function MCPDiagram() {
               stroke={`${app.color}60`} strokeWidth="1.2" />
             <rect x="242" y={app.y} width="70" height="28" rx="6"
               fill={`${app.color}14`} stroke={app.color} strokeWidth="1" />
-            <text x="277" y={app.y + 17} textAnchor="middle" fontSize="10"
-              fill={app.color} fontFamily="var(--font-body)">{app.label}</text>
+            <text x="277" y={app.y + 18} textAnchor="middle" fontSize="11"
+              fill={app.color} fontFamily="var(--font-body)" fontWeight="500">{app.label}</text>
           </motion.g>
         ))}
       </svg>
