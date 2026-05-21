@@ -52,13 +52,10 @@ export const tasks: Record<string, Task[]> = {
     { prompt: 'For a critical client deliverable — what temperature do you want? Why?', where: 'Anywhere', difficulty: 2 },
     { prompt: 'Find a real-world Claude Code task where you would override the default temperature. Justify why.', where: 'Claude Code', difficulty: 3 },
   ],
-  embedding: [
-    { prompt: 'Read the FT generative AI explainer (linked in Resources). Look at the embedding visualization specifically.', where: 'FT explainer', difficulty: 1 },
-    { prompt: 'List 5 words that seem unrelated but might be "close" in embedding space. Why might the model group them?', where: 'Anywhere', difficulty: 2 },
-    { prompt: 'Try OpenAI\'s playground or Cohere\'s embedding visualizer. Search for one term and see what comes back.', where: 'Embedding playground', difficulty: 3 },
-    { prompt: 'Sketch on paper: how would you explain "embedding" to a designer who has never heard of vectors?', where: 'Pen and paper', difficulty: 2 },
-    { prompt: 'Find a real product that uses semantic search (Notion AI, Perplexity, ChatGPT search). Notice when results feel "meaning-based" vs keyword-based.', where: 'Live products', difficulty: 2 },
-  ],
+  // embedding — intentionally has no tasks.
+  // It's a purely conceptual topic for this audience: designers need to
+  // recognise that "AI search isn't keyword search," not practice embeddings
+  // directly. The TaskList component renders nothing when the entry is missing.
 
   // ── Agents ──────────────────────────────────────────────────
   tool: [
