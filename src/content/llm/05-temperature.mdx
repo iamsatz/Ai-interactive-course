@@ -11,6 +11,17 @@ related: ["prompt", "hallucination"]
 
 <ConceptSection id="temperature" term="Temperature" category="llm" oneLiner="The dice-roll dial. Low = predictable. High = creative chaos.">
 
+<VideoLesson
+  keyPoints={[
+    "Temperature controls randomness — 0.0 is deterministic, 1.0 is chaotic",
+    "Low temperature (0–0.3): same prompt → same answer every time. Use for code, facts, data",
+    "High temperature (0.7–1.0): same prompt → different answers each run. Use for brainstorming",
+    "Most tools hide this setting — developer APIs and Claude Code expose it directly",
+    "Hallucination risk increases at higher temperatures"
+  ]}
+  exercise="Ask Claude the same factual question three times in a row. Then open Claude's API settings and ask the same question at temperature 0.9. Do the answers diverge? Which version do you trust more for a client deliverable?"
+/>
+
 Temperature is a parameter that controls how much randomness is introduced into the model's output. It runs from 0.0 (fully deterministic) to 1.0 (highly random), though some models allow values above 1.
 
 At **low temperature (0.0–0.3)**: the model always picks the most likely next token. Same prompt, same answer, every time. Best for: code, factual answers, structured data extraction.
@@ -26,16 +37,5 @@ Most consumer tools (including Claude) set a default temperature behind the scen
 <WhyItMatters accent="var(--accent-llm)">Tune temperature for the job. Factual extraction needs low temperature — you want the most likely, most consistent answer. Creative ideation benefits from higher temperature — you want diversity, not the obvious first response.</WhyItMatters>
 
 <RelatedTerms ids={["prompt", "hallucination"]} />
-
-<VideoLesson
-  keyPoints={[
-    "Temperature controls randomness — 0.0 is deterministic, 1.0 is chaotic",
-    "Low temperature (0–0.3): same prompt → same answer every time. Use for code, facts, data",
-    "High temperature (0.7–1.0): same prompt → different answers each run. Use for brainstorming",
-    "Most tools hide this setting — developer APIs and Claude Code expose it directly",
-    "Hallucination risk increases at higher temperatures"
-  ]}
-  exercise="Ask Claude the same factual question three times in a row. Then open Claude's API settings and ask the same question at temperature 0.9. Do the answers diverge? Which version do you trust more for a client deliverable?"
-/>
 
 </ConceptSection>

@@ -49,12 +49,20 @@ export function VideoLesson({ videoUrl, keyPoints, exercise }: VideoLessonProps)
       transition={{ duration: 0.45 }}
     >
       {/* Section label */}
-      <p
-        className="text-xs font-medium tracking-widest uppercase mb-3"
-        style={{ color: 'var(--ink-muted)', fontFamily: 'var(--font-body)' }}
-      >
-        Video lesson
-      </p>
+      <div className="flex items-baseline gap-3 mb-3 flex-wrap">
+        <p
+          className="text-xs font-medium tracking-widest uppercase"
+          style={{ color: 'var(--ink-muted)', fontFamily: 'var(--font-body)' }}
+        >
+          Prefer to watch?
+        </p>
+        <p
+          className="text-xs"
+          style={{ color: 'var(--ink-muted)', fontFamily: 'var(--font-body)' }}
+        >
+          A 3-minute AI-narrated walkthrough. Or just scroll down to read.
+        </p>
+      </div>
 
       {/* Two-column shell */}
       <div
