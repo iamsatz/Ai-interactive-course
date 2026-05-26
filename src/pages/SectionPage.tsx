@@ -13,6 +13,9 @@ import { Diagram } from '@/components/mdx/Diagram'
 import { Analogy } from '@/components/mdx/Analogy'
 import { WhyItMatters } from '@/components/mdx/WhyItMatters'
 import { RelatedTerms } from '@/components/mdx/RelatedTerms'
+import { WorkedExamples } from '@/components/mdx/WorkedExamples'
+import { PromptAnatomy } from '@/components/mdx/PromptAnatomy'
+import { ClarityCheck } from '@/components/mdx/ClarityCheck'
 import { Confusions } from '@/components/section/Confusions'
 import { TasksSection } from '@/components/section/TasksSection'
 
@@ -38,6 +41,9 @@ const mdxComponents = {
   Analogy,
   WhyItMatters,
   RelatedTerms,
+  WorkedExamples,
+  PromptAnatomy,
+  ClarityCheck,
 }
 
 export function SectionPage() {

@@ -13,13 +13,17 @@ export const tasks: Record<string, Task[]> = {
 
   // ── LLM Basics ─────────────────────────────────────────────
   prompt: [
-    { prompt: 'Take a vague prompt you used recently. Rewrite it with a role, three constraints, and an example output format. Compare results.', where: 'Claude.ai', difficulty: 1 },
-    { prompt: 'Write the same prompt three ways: minimal, verbose, with-examples. Note which one Claude responds to best.', where: 'Claude.ai', difficulty: 1 },
-    { prompt: 'Ask Claude to critique your own prompt before answering it. Iterate based on its feedback.', where: 'Claude.ai', difficulty: 2 },
-    { prompt: 'Write a prompt that includes an explicit "do not" list — three things Claude should avoid in the response.', where: 'Claude.ai', difficulty: 2 },
-    { prompt: 'Build a reusable prompt template for one task you do weekly. Save it somewhere you can grab quickly.', where: 'Anywhere', difficulty: 2 },
-    { prompt: 'Give Claude a bad example and a good example of the output you want. See how few-shot examples change the result.', where: 'Claude.ai', difficulty: 3 },
-    { prompt: 'Try a 50-word prompt and a 500-word prompt for the same task. Where does quality plateau?', where: 'Claude.ai', difficulty: 3 },
+    // Arjun's three worked examples — the actual exercises from the workshop
+    { prompt: 'Weather: ask "What\'s the weather like?" Then rewrite it to include the place, the timeframe, and why you\'re asking. Compare the two answers.', where: 'Claude.ai', difficulty: 1 },
+    { prompt: 'Recipe: ask "Can you suggest a recipe?" Then rewrite with constraints — dietary preference, ingredients on hand, time available. Compare.', where: 'Claude.ai', difficulty: 1 },
+    { prompt: 'Travel: ask "Tell me about Paris." Then rewrite as a 3-day itinerary brief with interests and a "what to avoid" filter. Compare.', where: 'Claude.ai', difficulty: 1 },
+    // Apply Arjun's 5-part anatomy
+    { prompt: 'Take one prompt you wrote this week. Map it against Arjun\'s 5 components — task / background / examples / instructions / data. Which were missing?', where: 'Anywhere', difficulty: 2 },
+    { prompt: 'Before your next AI question, run through Arjun\'s 5 clarity questions on paper. Fold the answers into your prompt.', where: 'Anywhere', difficulty: 2 },
+    { prompt: 'Add one example of the output format you want to a prompt that previously had none. Note how the response shape changes.', where: 'Claude.ai', difficulty: 2 },
+    { prompt: 'Try "prompting yourself" — use Claude to interview YOU about a topic, then write from the answers. Better than writing from a blank page.', where: 'Claude.ai · Perplexity · Dot', difficulty: 2 },
+    { prompt: 'Build a reusable prompt template for one task you do weekly. Use Arjun\'s 5-part structure as the scaffold.', where: 'Anywhere', difficulty: 3 },
+    { prompt: 'Try PromptPerfect or a similar prompt optimizer on one of your prompts. Notice what it adds — those are usually the things you forgot.', where: 'promptperfect.com', difficulty: 3 },
   ],
   token: [
     { prompt: 'Run "How many tokens is this sentence?" — try with 5 different sentences of varying length.', where: 'Claude.ai', difficulty: 1 },
